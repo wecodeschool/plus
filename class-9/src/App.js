@@ -1,16 +1,20 @@
 import React, { Component } from "react";
-import MainEnd from "./MainEnd";
 import "./App.css";
-import { BrowserRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
+import Routes from "./Routes";
 
-class App extends Component {
+export default class App extends Component {
   render() {
     return (
-      <BrowserRouter>
-        <MainEnd />
-      </BrowserRouter>
+      <div className="container">
+        <h1>
+          <Link to="/">Awesome Weather App</Link>{" "}
+          <Link to="/about">
+            <span className="badge badge-primary">about me</span>
+          </Link>
+        </h1>
+        <Routes />
+      </div>
     );
   }
 }
-
-export default App;
