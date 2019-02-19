@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import axios from "axios";
+import DateUtil from "./DateUtil";
 import { Link } from "react-router-dom";
+import WeatherIcon from "./WeatherIcon";
+import WeatherForecast from "./WeatherForecast";
 import "./Weather.sass";
 
 export default class End extends Component {
@@ -29,28 +32,12 @@ export default class End extends Component {
       axios.get(url).then(response => {
         this.setState({
           location: response.data.name,
-          date: this.formatDate(new Date(response.data.dt * 1000)),
+          date: new DateUtil(new Date(response.data.dt * 1000)).format(),
+          icon: response.data.weather[0].icon,
           temperature: Math.round(response.data.main.temp)
         });
       });
     }
-  };
-
-  formatDate = date => {
-    let days = [
-      "Sunday",
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday"
-    ];
-
-    let minutes = date.getMinutes();
-    if (minutes < 10) minutes = "0" + minutes;
-
-    return `${days[date.getDay()]} ${date.getHours()}:${minutes}`;
   };
 
   update = event => {
@@ -65,7 +52,9 @@ export default class End extends Component {
         <div>
           Temperature in {this.state.location} is {this.state.temperature}{" "}
           degrees
+          <WeatherIcon icon={this.state.icon} />
           <small className="time">{this.state.date}</small>
+          <WeatherForecast city={this.state.location} />
         </div>
       );
     }
