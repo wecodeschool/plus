@@ -24,7 +24,13 @@
         height: 500px;
       }
 
-      h1 {
+      .spinner-grow {
+        position: relative;
+        top: -7px;
+      }
+
+      h1,
+      h2 {
         font-family: "Permanent Marker", cursive;
         color: #022c43;
         text-align: center;
@@ -35,11 +41,6 @@
 
       img {
         display: block;
-      }
-
-      .spinner-grow {
-        position: relative;
-        top: -7px;
       }
     </style>
   </head>
@@ -58,8 +59,6 @@
           <p>
             <i class="fas fa-sun"></i>
             Current weather in Lisbon is 19 degrees
-            <br />
-            <br />
             <button type="button" class="btn btn-primary">Refresh</button>
           </p>
         </div>
