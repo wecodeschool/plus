@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Permanent+Marker|Roboto+Mono"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        font-family: "Roboto Mono", monospace;
+
+        height: 500px;
+      }
+
+      .spinner-grow {
+        position: relative;
+        top: -7px;
+      }
+
+      h1,
+      h2 {
+        font-family: "Permanent Marker", cursive;
+        color: #022c43;
+        text-align: center;
+      }
+      i {
+        color: #053f5e;
+      }
+
+      img {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        <div class="spinner-grow text-danger" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+        Live Weather App
+      </h1>
+      <br /><br />
+
+      <div class="row">
+        <div class="col-sm-6">
+          <p>
+            <i class="fas fa-sun"></i>
+            Current weather in Lisbon is 19 degrees
+            <button type="button" class="btn btn-primary">Refresh</button>
+          </p>
+        </div>
+        <div class="col-sm-6">
+          <img src="celebration.svg" alt="" width="300" />
+        </div>
+      </div>
+
+      <br /><br />
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="card" style="width: 18rem;">
+            <img src="celebration.svg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Forecast for tomorrow</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Check Weather</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card" style="width: 18rem;">
+            <img src="celebration.svg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Forecast for Thursday</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Check Weather</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card" style="width: 18rem;">
+            <img src="celebration.svg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Forecast for Friday</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Check Weather</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
