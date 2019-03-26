@@ -1,0 +1,42 @@
+<html>
+  <body>
+    <script>
+      let students = [
+        {
+          firstName: "Inês",
+          lastName: "Miranda",
+          female: true,
+          graduated: false,
+          course: "She Codes Plus",
+          version: 3,
+          attended: [1, 2]
+        },
+        {
+          firstName: "Marta",
+          lastName: "Gamas",
+          female: true,
+          graduated: true,
+          course: "She Codes Plus",
+          version: 2,
+          attended: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12]
+        }
+      ];
+
+      console.log(students[0].lastName);
+      console.log(students[1].version);
+      console.log(students[1].graduated);
+
+      students[2] = {
+        firstName: "Mariana",
+        lastName: "Silva",
+        female: true,
+        graduated: true,
+        course: "She Codes Plus",
+        version: 3,
+        attended: [1]
+      };
+
+      console.log(students[2]);
+    </script>
+  </body>
+</html>

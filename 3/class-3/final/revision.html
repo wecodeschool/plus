@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        padding: 60px 0;
+      }
+
+      button {
+        padding: 10px 20px;
+        display: block;
+        margin: 0 auto;
+        background: #fff;
+        border: 1px solid blue;
+        color: blue;
+      }
+      .liked {
+        background: blue;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <button>
+      Like
+    </button>
+    <script>
+      function like(event) {
+        if (event.target.classList.contains("liked")) {
+          event.target.innerHTML = "Like";
+          event.target.classList.remove("liked");
+        } else {
+          event.target.innerHTML = "Liked";
+          event.target.classList.add("liked");
+        }
+      }
+
+      let button = document.querySelector("button");
+      button.addEventListener("click", like);
+    </script>
+  </body>
+</html>

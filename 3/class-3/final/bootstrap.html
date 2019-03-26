@@ -1,0 +1,104 @@
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Indie+Flower"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      body {
+        margin: 30px auto;
+        color: #0e1662;
+      }
+
+      .last-updated-at {
+        font-size: 12px;
+        margin-left: 5px;
+        position: relative;
+        top: -8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="spinner-grow text-danger" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+      <small class="last-updated-at">Last updated 2 minutes ago</small>
+      <h1 class="alert-heading">
+        Live Weather app
+
+        <button type="button" class="btn btn-primary">
+          Refresh
+        </button>
+      </h1>
+
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Lisbon</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Paris</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Berlin</a>
+        </li>
+      </ul>
+
+      <br />
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card" style="width: 18rem;">
+            <img src="illustration.svg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Forecast for tomorrow</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Check weather</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card" style="width: 18rem;">
+            <img src="illustration.svg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Forecast for Thursday</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Check weather</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card" style="width: 18rem;">
+            <img src="illustration.svg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Forecast for Friday</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Check weather</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
