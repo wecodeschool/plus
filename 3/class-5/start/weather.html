@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Weather API</title>
   </head>
   <body>
-    <script></script>
+    <h1>Lisbon Weather</h1>
+    <script>
+      let city = "Paris";
+      let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+      let apiUrl = "https://api.openweathermap.org/data/2.5";
+      let apiPath = `weather?q=${city}&appid=${apiKey}&units=metric`;
+      let h1 = document.querySelector("h1");
+
+      axios.get(`${apiUrl}/${apiPath}`).then(function(response) {
+        let temperature = Math.round(response.data.main.temp);
+        h1.innerHTML = `It is ${temperature} degrees in ${city}`;
+      });
+    </script>
   </body>
 </html>

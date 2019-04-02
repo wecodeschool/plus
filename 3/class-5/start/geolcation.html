@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Geolocation</title>
+  </head>
+  <body>
+    <h1>She Codes Weather App</h1>
+    <button>Current location</button>
+    <br />
+    <small>Click on the button to get the weather</small>
+    <script>
+      function handleClick() {
+        navigator.geolocation.getCurrentPosition(function(position) {
+          let small = document.querySelector("small");
+          small.innerHTML = "Loading weather...";
+
+          let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+          let apiUrl = "https://api.openweathermap.org/data/2.5";
+          let apiPath = `weather?lat=${position.coords.latitude}&lon=${
+            position.coords.longitude
+          }&appid=${apiKey}&units=metric`;
+
+          axios.get(`${apiUrl}/${apiPath}`).then(function(response) {
+            let temperature = Math.round(response.data.main.temp);
+            let city = response.data.name;
+            small.innerHTML = `The weather in your current location (${city}) is ${temperature} degrees.`;
+          });
+        });
+      }
+
+      let button = document.querySelector("button");
+      button.addEventListener("click", handleClick);
+    </script>
+  </body>
+</html>

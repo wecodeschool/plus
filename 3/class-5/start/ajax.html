@@ -9,8 +9,17 @@
   </head>
   <body>
     <h1>Hello World</h1>
+    <small></small>
     <script>
-      let root = "https://jsonplaceholder.typicode.com";
+      let url = "https://jsonplaceholder.typicode.com";
+      let path = "users/1";
+      let small = document.querySelector("small");
+      let h1 = document.querySelector("h1");
+
+      axios.get(`${url}/${path}`).then(function(response) {
+        h1.innerHTML = `Welcome ${response.data.name}`;
+        small.innerHTML = `Phone number is ${response.data.phone}`;
+      });
     </script>
   </body>
 </html>

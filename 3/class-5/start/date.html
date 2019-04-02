@@ -1,14 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>JS Dates</title>
   </head>
   <body>
     <h1>Hello World</h1>
 
-    <script></script>
+    <script>
+      function formatDate(date) {
+        let minutes = date.getMinutes();
+        if (minutes < 10) {
+          minutes = `0${minutes}`;
+        }
+        let dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+        let day = dayNames[date.getDay()];
+
+        let monthNames = [
+          "Jan",
+          "Feb",
+          "Mar",
+          "Apr",
+          "May",
+          "Jun",
+          "Jul",
+          "Aug",
+          "Sep",
+          "Oct",
+          "Nov",
+          "Dec"
+        ];
+
+        let month = monthNames[date.getMonth()];
+        return `${day} ${month} ${now.getDate()} ${now.getHours()}:${minutes}, ${now.getFullYear()}`;
+      }
+
+      let h1 = document.querySelector("h1");
+      let now = new Date();
+      h1.innerHTML = formatDate(now);
+    </script>
   </body>
 </html>
