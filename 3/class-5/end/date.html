@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hello World</h1>
+
+    <script>
+      function getFriendlyDate(date) {
+        let day = date.getDay();
+        let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+        let months = [
+          "Jan",
+          "Feb",
+          "Mar",
+          "Apr",
+          "May",
+          "Jun",
+          "Jul",
+          "Aug",
+          "Sep",
+          "Oct",
+          "Nov",
+          "Dec"
+        ];
+
+        return `${days[day]} ${date.getDate()} ${
+          months[date.getMonth()]
+        } ${date.getHours()}:${date.getMinutes()}, ${1900 + date.getYear()}`;
+      }
+
+      let today = new Date();
+      let h1 = document.querySelector("h1");
+
+      h1.innerHTML = getFriendlyDate(today);
+    </script>
+  </body>
+</html>

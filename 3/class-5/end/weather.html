@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Weather API</title>
+  </head>
+  <body>
+    <script>
+      let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+      let url = `https://api.openweathermap.org/data/2.5/weather?q=Lisbon&appid=${apiKey}&units=metric`;
+
+      axios.get(url).then(function(response) {
+        console.log(Math.round(response.data.main.temp));
+      });
+    </script>
+  </body>
+</html>
