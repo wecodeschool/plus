@@ -1,0 +1,23 @@
+<html>
+  <head>
+  </head>
+
+  <body>
+    <form>
+    	<input type="text" id="search-input">
+    	<input type="submit" value="Search">
+    </form>
+
+    <script>
+    	function handleSubmit(event) {
+    		event.preventDefault();
+    		let input = document.querySelector("#search-input");
+    		alert(input.value);
+    	}
+
+    	let form = document.querySelector("form");
+
+    	form.addEventListener("submit", handleSubmit);
+    </script>
+  </body>
+</html>
