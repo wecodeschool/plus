@@ -5,6 +5,9 @@ let temperature = document.querySelector("#weather-temperature");
 let humidityLevel = document.querySelector("#weather-humidity-level");
 let windSpeed = document.querySelector("#weather-wind-speed");
 let form = document.querySelector("#weather-search-form");
+let currentLocationButton = document.querySelector(
+  "#weather-current-location-button"
+);
 
 let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
 let apiRoot = "https://api.openweathermap.org/data/2.5";
@@ -57,6 +60,20 @@ function handleSearch(event) {
   }
 }
 
+function searchPosition(position) {
+  let apiUrl = `${apiRoot}/weather?lon=${position.coords.longitude}&lat=${
+    position.coords.latitude
+  }&appid=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(refreshWeather);
+}
+
+function getCurrentLocationWeather(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(searchPosition);
+}
+
 form.addEventListener("submit", handleSearch);
+currentLocationButton.addEventListener("click", getCurrentLocationWeather);
 
 search(defaultCity);
