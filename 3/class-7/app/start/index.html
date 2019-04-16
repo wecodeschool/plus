@@ -30,23 +30,24 @@
           </form>
           <button class="btn btn-success float-left">Current Location</button>
         </div>
-        <h1>Lisbon</h1>
+        <h1 id="weather-city"></h1>
         <ul>
-          <li>Tuesday 7:00 PM</li>
-          <li>Partly Cloudy</li>
+          <li id="weather-timestamp"></li>
+          <li id="weather-description"></li>
         </ul>
         <div class="row">
           <div class="col-md-6">
-            <h2>16<small>°C</small></h2>
+            <h2><span id="weather-temperature"></span><small>°C</small></h2>
           </div>
           <div class="col-md-6">
             <ul>
-              <li>Humidity: 62%</li>
-              <li>Wind: 18 km/h</li>
+              <li>Humidity: <span id="weather-humidity-level"></span>%</li>
+              <li>Wind: <span id="weather-wind-speed"></span> km/h</li>
             </ul>
           </div>
         </div>
       </div>
     </div>
+    <script src="app.js"></script>
   </body>
 </html>
