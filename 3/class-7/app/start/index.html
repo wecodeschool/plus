@@ -1,27 +1,52 @@
 <html>
-  <head></head>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
   <body>
-    <div class="weather">
-      <form>
-        <input
-          type="text"
-          placeholder="Enter a city"
-          autocomplete="off"
-          required="required"
-        />
-        <input type="submit" value="Search" />
-      </form>
-      <button>Current Location</button>
-      <h1>Lisbon</h1>
-      <ul>
-        <li>Tuesday 7:00 PM</li>
-        <li>Partly Cloudy</li>
-      </ul>
-      <h2>16 <small>°C</small></h2>
-      <ul>
-        <li>Humidity: 62%</li>
-        <li>Wind: 18 km/h</li>
-      </ul>
+    <div class="container">
+      <div class="weather">
+        <div class="clearfix">
+          <form class="clearfix float-left">
+            <div class="form-group float-left">
+              <input
+                type="text"
+                placeholder="Enter a city"
+                autocomplete="off"
+                required="required"
+                class="form-control"
+              />
+            </div>
+            <input
+              type="submit"
+              value="Search"
+              class="btn btn-primary float-left"
+            />
+          </form>
+          <button class="btn btn-success float-left">Current Location</button>
+        </div>
+        <h1>Lisbon</h1>
+        <ul>
+          <li>Tuesday 7:00 PM</li>
+          <li>Partly Cloudy</li>
+        </ul>
+        <div class="row">
+          <div class="col-md-6">
+            <h2>16<small>°C</small></h2>
+          </div>
+          <div class="col-md-6">
+            <ul>
+              <li>Humidity: 62%</li>
+              <li>Wind: 18 km/h</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
