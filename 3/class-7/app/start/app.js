@@ -4,8 +4,12 @@ let description = document.querySelector("#weather-description");
 let temperature = document.querySelector("#weather-temperature");
 let humidityLevel = document.querySelector("#weather-humidity-level");
 let windSpeed = document.querySelector("#weather-wind-speed");
+let form = document.querySelector("#weather-search-form");
+
 let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
 let apiRoot = "https://api.openweathermap.org/data/2.5";
+
+let defaultCity = "San Francisco";
 
 function formatDate(date) {
   let days = [
@@ -36,7 +40,23 @@ function refreshWeather(response) {
   windSpeed.innerHTML = Math.round(response.data.wind.speed);
 }
 
-let city = "Bangkok";
-let apiUrl = `${apiRoot}/weather?q=${city}&appid=${apiKey}&units=metric`;
+function search(city) {
+  let apiUrl = `${apiRoot}/weather?q=${city}&appid=${apiKey}&units=metric`;
 
-axios.get(apiUrl).then(refreshWeather);
+  axios.get(apiUrl).then(refreshWeather);
+}
+
+function handleSearch(event) {
+  event.preventDefault();
+  let input = document.querySelector("#weather-search-text-input");
+
+  if (input.value.length > 0) {
+    search(input.value);
+  } else {
+    alert("Please enter a city");
+  }
+}
+
+form.addEventListener("submit", handleSearch);
+
+search(defaultCity);
