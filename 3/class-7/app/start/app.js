@@ -8,10 +8,10 @@ let form = document.querySelector("#weather-search-form");
 let currentLocationButton = document.querySelector(
   "#weather-current-location-button"
 );
+let icon = document.querySelector("#weather-icon");
 
 let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
 let apiRoot = "https://api.openweathermap.org/data/2.5";
-
 let defaultCity = "San Francisco";
 
 function formatDate(date) {
@@ -35,11 +35,17 @@ function formatDate(date) {
 }
 
 function refreshWeather(response) {
+  let iconUrl = `http://openweathermap.org/img/w/${
+    response.data.weather[0].icon
+  }.png`;
+
   place.innerHTML = response.data.name;
   timestamp.innerHTML = formatDate(new Date(response.data.dt * 1000));
   description.innerHTML = response.data.weather[0].description;
   temperature.innerHTML = Math.round(response.data.main.temp);
   humidityLevel.innerHTML = response.data.main.humidity;
+  icon.setAttribute("src", iconUrl);
+  icon.setAttribute("alt", response.data.weather[0].description);
   windSpeed.innerHTML = Math.round(response.data.wind.speed);
 }
 

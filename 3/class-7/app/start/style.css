@@ -42,6 +42,11 @@ li {
   text-transform: capitalize;
 }
 
+img {
+  display: block;
+  margin: 15px 0;
+}
+
 .weather {
   border: 1px solid #dadce1;
   border-radius: 20px;
