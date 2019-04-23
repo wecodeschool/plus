@@ -7,12 +7,13 @@ export default class Weather extends Component {
     return (
       <div>
         <h1>Weather App</h1>
-      
-        <table className="table">
+
+        <table className="table table-striped table-dark shadow-lg">
           <thead className="thead-dark">
             <tr>
               <th scope="col">City</th>
               <th scope="col">Temperature</th>
+              <th scope="col">Feels like</th>
               <th scope="col">Actions</th>
             </tr>
           </thead>
@@ -20,7 +21,7 @@ export default class Weather extends Component {
             <City temperature={19} name="Lisbon" />
             <City temperature={24} name="Paris" />
             <City temperature={-4} name="Moscow" />
-            <City temperature={20} name="New York" />
+            <City temperature={14} name="New York" />
             <City temperature={17} name="Buenos Aires" />
           </tbody>
         </table>
