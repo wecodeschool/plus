@@ -18,12 +18,12 @@ export default class Weather extends Component {
             </tr>
           </thead>
           <tbody>
-            <City name="Lisbon" temperature="17" />
-            <City name="Paris" temperature="13" />
-            <City name="New York" temperature="20" />
-            <City name="Moscow" temperature="3" />
-            <City name="Sydney" temperature="20" />
-            <City name="San Francisco" temperature="27" />
+            <City name="Lisbon" temperature={17} />
+            <City name="Paris" temperature={13} />
+            <City name="New York" temperature={20} />
+            <City name="Moscow" temperature={3} />
+            <City name="Sydney" temperature={20} />
+            <City name="San Francisco" temperature={27} />
           </tbody>
         </table>
       </div>
