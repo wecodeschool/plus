@@ -1,12 +1,22 @@
 import React, { Component } from "react";
+import CityTemperature from "./CityTemperature";
 import "./City.css";
 
 export default class City extends Component {
   render() {
     return (
       <tr>
-        <td>Lisbon</td>
-        <td>17°C</td>
+        <td>{this.props.name}</td>
+        <td>
+          <CityTemperature
+            temperature={this.props.temperature}
+            unit="metrics"
+          />
+          <CityTemperature
+            temperature={this.props.temperature}
+            unit="imperial"
+          />
+        </td>
         <td>
           <span className="badge badge-danger">Hot</span>
         </td>
