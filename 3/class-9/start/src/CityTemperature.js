@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./CityTemperature.css";
 
 export default class CityTemperature extends Component {
   calculateTemperature() {
