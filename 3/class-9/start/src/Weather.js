@@ -19,6 +19,10 @@ export default class Weather extends Component {
           </thead>
           <tbody>
             <City />
+            <City />
+            <City />
+            <City />
+            <City />
           </tbody>
         </table>
       </div>
