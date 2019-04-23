@@ -15,6 +15,10 @@ export default class City extends Component {
     }
   }
 
+  learnMore() {
+    window.location = "https://weather.com/";
+  }
+
   render() {
     return (
       <tr>
@@ -31,7 +35,10 @@ export default class City extends Component {
         </td>
         <td>{this.badge()}</td>
         <td>
-          <button type="button" className="btn btn-outline-light btn-sm">
+          <button
+            onClick={this.learnMore}
+            className="btn btn-outline-light btn-sm"
+          >
             Learn more
           </button>
         </td>
