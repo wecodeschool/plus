@@ -1,0 +1,42 @@
+body {
+  font-family: "Overpass Mono", monospace;
+  height: 5000px;
+}
+
+h1 {
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin: 20px auto;
+  background: #e2daff;
+  font-family: "Permanent Marker", cursive;
+  border-radius: 4px;
+  text-align: center;
+  padding: 10px 20px;
+  color: #ff5d9e;
+}
+
+h2 {
+  text-align: center;
+}
+
+p {
+  color: black;
+}
+
+i {
+  color: #8f71ff;
+}
+
+img {
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+small {
+  text-align: center;
+  display: block;
+  font-size: 48px;
+  margin: 20px 0;
+}
