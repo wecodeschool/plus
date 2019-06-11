@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hello World</h1>
+    <script>
+      let root = "https://jsonplaceholder.typicode.com";
+      let path = "users/1";
+
+      axios.get(`${root}/${path}`).then(function(response) {
+        console.log(response.data.address.street);
+      });
+    </script>
+  </body>
+</html>
