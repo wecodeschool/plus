@@ -1,17 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Geolocation</title>
   </head>
   <body>
-    <h1>She Codes Weather App</h1>
-    <button>Current location</button>
-    <br />
-    <small>Click on the button to get the weather</small>
-    <script></script>
+    <h1>SheCodes Weather App</h1>
+    <h2>Loading weather..</h2>
+    <script>
+      function showTemperature(response) {
+        let temperature = response.data.main.temp;
+
+        let h2 = document.querySelector("h2");
+        h2.innerHTML = `${Math.round(temperature)}°C`;
+      }
+
+      function showPosition(position) {
+        let latitude = position.coords.latitude;
+        let longitude = position.coords.longitude;
+
+        let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+        let apiEndPoint = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+        axios.get(apiEndPoint).then(showTemperature);
+      }
+
+      navigator.geolocation.getCurrentPosition(showPosition);
+    </script>
   </body>
 </html>

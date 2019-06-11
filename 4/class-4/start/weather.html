@@ -6,7 +6,21 @@
   </head>
   <body>
     <h1>Lisbon Weather</h1>
+    <h2>Loading...</h2>
 
+    <script>
+      function showTemperature(response) {
+        let temperature = response.data.main.temp;
+
+        let h2 = document.querySelector("h2");
+        h2.innerHTML = `${Math.round(temperature)}°C`;
+      }
+
+      let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+      let city = "lisbon";
+      let apiEndPoint = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+      axios.get(apiEndPoint).then(showTemperature);
     </script>
   </body>
 </html>

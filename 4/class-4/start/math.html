@@ -2,5 +2,24 @@
   <head> </head>
   <body>
     <h1>Math</h1>
+    <script>
+      let temperature = 19.7;
+      temperature = Math.round(temperature);
+      console.log(temperature);
+
+      let morningTemperature = 11;
+      let eveningTemperature = 10;
+      let minimumTemperature = Math.min(morningTemperature, eveningTemperature);
+      console.log(minimumTemperature);
+
+      let maximumTemperature = Math.max(morningTemperature, eveningTemperature);
+      console.log(maximumTemperature);
+
+      console.log(
+        `Here is a random number between 0 and 100: ${Math.round(
+          Math.random() * 100
+        )}`
+      );
+    </script>
   </body>
 </html>

@@ -5,8 +5,46 @@
   </head>
   <body>
     <h1>Dates</h1>
-    <small>Tue Jun 11 18:19, 2019</small>
+    <h2></h2>
 
-    <script></script>
+    <script>
+      function formatDate(date) {
+        let year = date.getFullYear();
+        let dayNumber = date.getDate();
+        let hour = date.getHours();
+        let minutes = date.getMinutes();
+
+        if (minutes < 10) {
+          minutes = `0${minutes}`;
+        }
+
+        let day = date.getDay();
+        let dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+        let dayName = dayNames[day];
+
+        let month = date.getMonth();
+        let monthNames = [
+          "Jan",
+          "Feb",
+          "Mar",
+          "Apr",
+          "May",
+          "Jun",
+          "Jul",
+          "Aug",
+          "Sep",
+          "Oct",
+          "Nov",
+          "Dec"
+        ];
+        let monthName = monthNames[month];
+
+        return `${dayName} ${monthName} ${dayNumber} ${hour}:${minutes}, ${year}`;
+      }
+
+      let now = new Date();
+      let h2 = document.querySelector("h2");
+      h2.innerHTML = formatDate(now);
+    </script>
   </body>
 </html>

@@ -1,6 +1,37 @@
 <html>
   <body>
     <h1>Object</h1>
-    <script></script>
+    <script>
+      let user = {
+        email: "peter@gmail.com",
+        age: 30,
+        gender: "Male",
+        loggedIn: false
+      };
+
+      user.loggedIn = true;
+
+      let students = [
+        {
+          firstName: "Raquel",
+          email: "raquel@gmail.com",
+          siblings: {
+            brothers: ["Luis", "Joao"],
+            sisters: ["Sofia", "Iris"]
+          }
+        },
+        {
+          firstName: "Catarina",
+          email: "catarina@gmail.com"
+        },
+        {
+          firstName: "Sofia",
+          email: "sofia@gmail.com"
+        }
+      ];
+
+      numberOfSisters = students[0].siblings.sisters.length;
+      console.log(`${students[0].firstName} has ${numberOfSisters} sisters`);
+    </script>
   </body>
 </html>
