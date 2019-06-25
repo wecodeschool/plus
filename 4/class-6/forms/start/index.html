@@ -12,12 +12,16 @@
     </form>
 
     <script>
+      function updateHeading(newHeading) {
+        let h1 = document.querySelector("h1");
+        h1.innerHTML = newHeading;
+      }
+
       function handleSubmit(event) {
         event.preventDefault();
 
         let input = document.querySelector("#name");
-        let h1 = document.querySelector("h1");
-        h1.innerHTML = `Welcome, ${input.value}`;
+        updateHeading(`Welcome, ${input.value}`);
       }
 
       let form = document.querySelector("form");
