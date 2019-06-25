@@ -13,8 +13,6 @@ function showTemperature(response) {
 
   let wind = document.querySelector("#wind");
   wind.innerText = Math.round(response.data.wind.speed);
-
-  console.log(response.data);
 }
 
 let city = "Lisbon";
