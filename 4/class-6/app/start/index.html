@@ -10,26 +10,39 @@
       crossorigin="anonymous"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
     <title>Weather App</title>
   </head>
   <body>
     <div class="container">
-      <h1>Lisbon</h1>
-      <ul>
-        <li>Tuesday 19:00</li>
-        <li>Partly Cloudy</li>
-      </ul>
-      <div class="row">
-        <div class="col-6">
-          <h2>22 <small>°C</small></h2>
-        </div>
+      <div class="app">
+        <h1>Lisbon</h1>
+        <ul>
+          <li>Tuesday 19:00</li>
+          <li>Partly Cloudy</li>
+        </ul>
+        <div class="row mt-3">
+          <div class="col-6">
+            <div class="clearfix">
+              <div class="float-left mr-2 mt-1">
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                  alt=""
+                />
+              </div>
+              <div class="float-left">
+                <h2>22<small>°C</small></h2>
+              </div>
+            </div>
+          </div>
 
-        <div class="col-6">
-          <ul>
-            <li>Precipitation: 0%</li>
-            <li>Humidity: 66%</li>
-            <li>Wind: 11 km/h</li>
-          </ul>
+          <div class="col-6">
+            <ul>
+              <li>Precipitation: 0%</li>
+              <li>Humidity: 66%</li>
+              <li>Wind: 11 km/h</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

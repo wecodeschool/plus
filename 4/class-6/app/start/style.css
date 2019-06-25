@@ -1,0 +1,43 @@
+body {
+  font-family: arial, sans-serif;
+}
+
+h1 {
+  color: rgb(135, 135, 135);
+  font-size: 24px;
+  line-height: 29px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 64px;
+  color: rgb(33, 33, 33);
+  font-weight: 400;
+  margin: 0;
+}
+
+small {
+  font-size: 16px;
+  position: relative;
+  top: -32px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  color: rgb(135, 135, 135);
+  list-style: none;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.app {
+  border: 1px solid #dadde1;
+  padding: 20px 15px;
+  max-width: 800px;
+  margin: 30px auto;
+  border-radius: 10px;
+}
