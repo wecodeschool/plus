@@ -1,0 +1,43 @@
+body {
+  color: rgb(135, 135, 135);
+  font-family: arial, sans-serif;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 100;
+  line-height: 28.8px;
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  line-height: 1.4;
+  text-transform: capitalize;
+}
+
+h2 {
+  color: rgb(33, 33, 33);
+  font-size: 64px;
+  font-weight: 300;
+  margin: 0;
+}
+
+h2 small {
+  font-size: 16px;
+  position: relative;
+  top: -32px;
+}
+
+.weather {
+  border: 1px solid #dadde1;
+  border-radius: 4px;
+  padding: 20px;
+  margin: 30px auto;
+  max-width: 600px;
+}
