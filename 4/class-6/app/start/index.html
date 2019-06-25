@@ -17,10 +17,10 @@
   <body>
     <div class="container">
       <div class="app">
-        <h1>Lisbon</h1>
+        <h1 id="place"></h1>
         <ul>
           <li>Tuesday 19:00</li>
-          <li>Partly Cloudy</li>
+          <li id="description" class="text-capitalize">Partly Cloudy</li>
         </ul>
         <div class="row mt-3">
           <div class="col-6">
@@ -39,9 +39,8 @@
 
           <div class="col-6">
             <ul>
-              <li>Precipitation: 0%</li>
-              <li>Humidity: 66%</li>
-              <li>Wind: 11 km/h</li>
+              <li>Humidity: <span id="humidity"></span>%</li>
+              <li>Wind: <span id="wind"></span> km/h</li>
             </ul>
           </div>
         </div>
