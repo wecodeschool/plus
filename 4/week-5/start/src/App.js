@@ -26,6 +26,9 @@ export default class App extends Component {
           <div className="col-md-4 mb-3">
             <CityWeather name="South Pole" temp={-59} />
           </div>
+          <div className="col-md-4 mb-3">
+            <CityWeather name="Singapore" temp={50} />
+          </div>
         </div>
       </div>
     );

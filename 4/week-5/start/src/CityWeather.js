@@ -3,17 +3,20 @@ import "./CityWeather.css";
 
 export default class CityWeather extends Component {
   label() {
-    if (this.props.temp < 0) return "FREEZING";
-    if (this.props.temp > 25) return "HOT";
-    if (this.props.temp < 10) return "COLD";
-    return "WARM";
+    if (this.props.temp < 0)
+      return <div className="badge badge-primary">FREEZING</div>;
+    if (this.props.temp > 25)
+      return <div className="badge badge-danger">HOT</div>;
+    if (this.props.temp < 10)
+      return <div className="badge badge-info">COLD</div>;
+    return <div className="badge badge-warning">WARM</div>;
   }
 
   render() {
     return (
       <div className="card">
         <div className="card-body bg-light">
-          <div className="badge badge-danger">{this.label()}</div>
+          {this.label()}
           <h5 className="card-title">
             <strong>{this.props.name}</strong>
           </h5>
