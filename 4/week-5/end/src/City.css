@@ -1,0 +1,17 @@
+.card-text strong {
+  font-size: 38px;
+}
+
+.card-text small {
+  position: relative;
+  top: -19px;
+}
+
+.farenheit {
+  color: blue;
+  cursor: pointer;
+}
+
+.farenheit:hover {
+  text-decoration: underline;
+}
