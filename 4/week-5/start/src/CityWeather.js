@@ -8,10 +8,10 @@ export default class CityWeather extends Component {
         <div className="card-body bg-light">
           <div className="badge badge-danger">HOT</div>
           <h5 className="card-title">
-            <strong>Lisbon</strong>
+            <strong>{this.props.name}</strong>
           </h5>
           <p className="card-text city-temperature">
-            18
+            {this.props.temp}
             <small>
               °C | <span className="fahrenheit">°F</span>
             </small>
