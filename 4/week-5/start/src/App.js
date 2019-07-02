@@ -4,12 +4,9 @@ import "./App.css";
 
 export default class App extends Component {
   render() {
-    let heading = "Weather App";
-
     return (
       <div>
-        <h1>{heading}</h1>
-
+        <h1>Weather App</h1>
         <div className="row">
           <div className="col-md-4">
             <CityWeather />
