@@ -16,8 +16,12 @@ export default class CityWeather extends Component {
               °C | <span className="fahrenheit">°F</span>
             </small>
           </p>
-          <a href="#" className="btn btn-primary shadow-sm">
-            Learn more
+          <a
+            href={`https://www.google.com/search?q=weather+${this.props.name}`}
+            target="_blank"
+            className="btn btn-primary btn-sm shadow-sm"
+          >
+            View forecast
           </a>
         </div>
       </div>
