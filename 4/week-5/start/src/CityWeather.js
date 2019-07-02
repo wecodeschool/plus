@@ -2,11 +2,18 @@ import React, { Component } from "react";
 import "./CityWeather.css";
 
 export default class CityWeather extends Component {
+  label() {
+    if (this.props.temp < 0) return "FREEZING";
+    if (this.props.temp > 25) return "HOT";
+    if (this.props.temp < 10) return "COLD";
+    return "WARM";
+  }
+
   render() {
     return (
       <div className="card">
         <div className="card-body bg-light">
-          <div className="badge badge-danger">HOT</div>
+          <div className="badge badge-danger">{this.label()}</div>
           <h5 className="card-title">
             <strong>{this.props.name}</strong>
           </h5>
