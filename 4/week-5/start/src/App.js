@@ -9,22 +9,22 @@ export default class App extends Component {
         <h1>Weather App</h1>
         <div className="row">
           <div className="col-md-4 mb-3">
-            <CityWeather name="Paris" temp="24" />
+            <CityWeather name="Paris" temp={24} />
           </div>
           <div className="col-md-4 mb-3">
-            <CityWeather name="Lisbon" temp="21" />
+            <CityWeather name="Lisbon" temp={21} />
           </div>
           <div className="col-md-4 mb-3">
-            <CityWeather name="Sydney" temp="8" />
+            <CityWeather name="Sydney" temp={8} />
           </div>
           <div className="col-md-4 mb-3">
-            <CityWeather name="Santiago" temp="16" />
+            <CityWeather name="Santiago" temp={16} />
           </div>
           <div className="col-md-4 mb-3">
-            <CityWeather name="New York" temp="32" />
+            <CityWeather name="New York" temp={32} />
           </div>
           <div className="col-md-4 mb-3">
-            <CityWeather name="South Pole" temp="-59" />
+            <CityWeather name="South Pole" temp={-59} />
           </div>
         </div>
       </div>
