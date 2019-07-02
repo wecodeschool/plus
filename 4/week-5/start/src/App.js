@@ -7,6 +7,7 @@ export default class App extends Component {
     return (
       <div>
         <h1>Weather App</h1>
+
         <div className="row">
           <div className="col-md-4 mb-3">
             <CityWeather name="Paris" temp={24} />

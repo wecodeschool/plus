@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./CityWeather.css";
+import { throwStatement } from "@babel/types";
 
 export default class CityWeather extends Component {
   label() {
@@ -10,6 +11,10 @@ export default class CityWeather extends Component {
     if (this.props.temp < 10)
       return <div className="badge badge-info">COLD</div>;
     return <div className="badge badge-warning">WARM</div>;
+  }
+
+  convertTemp() {
+    alert("Feature is coming soon");
   }
 
   render() {
@@ -23,7 +28,10 @@ export default class CityWeather extends Component {
           <p className="card-text city-temperature">
             {this.props.temp}
             <small>
-              °C | <span className="fahrenheit">°F</span>
+              °C |
+              <span className="fahrenheit" onClick={this.convertTemp}>
+                °F
+              </span>
             </small>
           </p>
           <a
