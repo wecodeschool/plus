@@ -1,0 +1,19 @@
+.city-temperature {
+  font-size: 38px;
+  font-weight: 500;
+}
+
+.city-temperature small {
+  font-size: 13px;
+  position: relative;
+  top: -17px;
+}
+
+.fahrenheit {
+  color: blue;
+  cursor: pointer;
+}
+
+.fahrenheit:hover {
+  text-decoration: underline;
+}
