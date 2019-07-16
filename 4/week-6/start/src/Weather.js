@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import Loader from "react-loader-spinner";
 import HumanDate from "./HumanDate";
 import WeatherIcon from "./WeatherIcon";
 import "./Weather.css";
@@ -74,7 +75,11 @@ export default class Weather extends Component {
         </div>
       );
     } else {
-      return <h1>Loading...</h1>;
+      return (
+        <div className="loader">
+          <Loader type="Oval" color="#333" height="100" width="100" />
+        </div>
+      );
     }
   }
 }

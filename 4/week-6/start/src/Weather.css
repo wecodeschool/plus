@@ -47,3 +47,13 @@ img {
   left: 5px;
   top: -32px;
 }
+
+.loader {
+  padding: 60px 0;
+}
+
+.loader svg {
+  margin: 0 auto;
+  display: block;
+  opacity: 0.8;
+}
