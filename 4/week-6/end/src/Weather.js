@@ -13,7 +13,6 @@ class Weather extends Component {
   };
 
   loadWeather = response => {
-    console.log(response);
     this.setState({
       loaded: true,
       weather: {
@@ -57,7 +56,7 @@ class Weather extends Component {
             <li>{this.state.weather.description}</li>
           </ul>
           <div className="row">
-            <div className="col-md-6">
+            <div className="col-sm-6">
               <div className="clearfix">
                 <div className="float-left">
                   <WeatherIcon icon={this.state.weather.icon} />
@@ -69,7 +68,7 @@ class Weather extends Component {
                 </div>
               </div>
             </div>
-            <div className="col-md-6">
+            <div className="col-sm-6">
               <ul>
                 <li>Precipitation: {this.state.weather.precipitation}%</li>
                 <li>Humidity: {this.state.weather.humidity}%</li>
