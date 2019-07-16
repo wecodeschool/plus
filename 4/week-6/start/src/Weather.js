@@ -13,7 +13,6 @@ export default class Weather extends Component {
   };
 
   showResults = response => {
-    console.log(response.data);
     this.setState({
       loaded: true,
       weather: {
@@ -29,17 +28,41 @@ export default class Weather extends Component {
     });
   };
 
-  componentDidMount() {
-    let apiUrl = `${this.apiRoot}/data/2.5/weather?q=${this.props.city}&appid=${
+  search = city => {
+    let apiUrl = `${this.apiRoot}/data/2.5/weather?q=${city}&appid=${
       this.apiKey
     }&units=metric`;
     axios.get(apiUrl).then(this.showResults);
+  };
+
+  componentDidMount() {
+    this.search(this.props.city);
   }
+
+  submit = event => {
+    event.preventDefault();
+    this.search(this.state.keywords);
+  };
+
+  updateKeywords = event => {
+    this.setState({
+      keywords: event.target.value
+    });
+  };
 
   render() {
     if (this.state.loaded) {
       return (
         <div>
+          <form onSubmit={event => this.submit(event)}>
+            <input
+              type="text"
+              placeholder="Search for a city.."
+              className="p-2 mb-2 rounded border"
+              autoFocus={true}
+              onChange={event => this.updateKeywords(event)}
+            />
+          </form>
           <h1>{this.state.weather.city}</h1>
           <ul>
             <li>
