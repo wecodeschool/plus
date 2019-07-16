@@ -23,6 +23,11 @@ li {
   text-transform: capitalize;
 }
 
+img {
+  position: relative;
+  top: -20px;
+}
+
 .temperature {
   color: rgb(33, 33, 33);
   font-family: arial, helvetica, sans-serif;
@@ -30,7 +35,8 @@ li {
   font-stretch: 100%;
   font-weight: 400;
   line-height: 1;
-  margin-left: 15px;
+  left: -10px;
+  position: relative;
   letter-spacing: -3px;
 }
 

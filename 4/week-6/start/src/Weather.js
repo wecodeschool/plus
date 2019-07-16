@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import HumanDate from "./HumanDate";
+import WeatherIcon from "./WeatherIcon";
 import "./Weather.css";
 
 export default class Weather extends Component {
@@ -19,7 +20,7 @@ export default class Weather extends Component {
         city: response.data.name,
         description: response.data.weather[0].description,
         temperature: Math.round(response.data.main.temp),
-        iconUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
+        icon: response.data.weather[0].icon,
         humidity: response.data.main.humidity,
         wind: Math.round(response.data.wind.speed)
       }
@@ -47,11 +48,12 @@ export default class Weather extends Component {
           <div className="row">
             <div className="col-sm-6 ">
               <div className="clearfix">
-                <img
-                  src={this.state.weather.iconUrl}
-                  alt=""
-                  className="float-left"
-                />
+                <div className="float-left">
+                  <WeatherIcon
+                    code={this.state.weather.icon}
+                    alt={this.state.weather.description}
+                  />
+                </div>
                 <div className="temperature float-left">
                   {this.state.weather.temperature}
                   <small>°C</small>
