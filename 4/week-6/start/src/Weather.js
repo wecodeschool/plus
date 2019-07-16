@@ -3,6 +3,7 @@ import axios from "axios";
 import Loader from "react-loader-spinner";
 import HumanDate from "./HumanDate";
 import WeatherIcon from "./WeatherIcon";
+import Search from "./Search";
 import "./Weather.css";
 
 export default class Weather extends Component {
@@ -39,30 +40,12 @@ export default class Weather extends Component {
     this.search(this.props.city);
   }
 
-  submit = event => {
-    event.preventDefault();
-    this.search(this.state.keywords);
-  };
-
-  updateKeywords = event => {
-    this.setState({
-      keywords: event.target.value
-    });
-  };
-
   render() {
     if (this.state.loaded) {
       return (
         <div>
-          <form onSubmit={event => this.submit(event)}>
-            <input
-              type="text"
-              placeholder="Search for a city.."
-              className="p-2 mb-2 rounded border"
-              autoFocus={true}
-              onChange={event => this.updateKeywords(event)}
-            />
-          </form>
+          <Search submit={this.search} />
+
           <h1>{this.state.weather.city}</h1>
           <ul>
             <li>

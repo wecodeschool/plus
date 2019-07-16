@@ -11,6 +11,16 @@ export default class App extends Component {
             <Weather city="Lisbon" />
           </div>
         </div>
+        <div className="card m-5">
+          <div className="card-body">
+            <Weather city="Moscow" />
+          </div>
+        </div>
+        <div className="card m-5">
+          <div className="card-body">
+            <Weather city="Sao paulo" />
+          </div>
+        </div>
       </div>
     );
   }
