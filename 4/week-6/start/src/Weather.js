@@ -12,7 +12,6 @@ export default class Weather extends Component {
   };
 
   showResults = response => {
-    console.log(response);
     this.setState({
       loaded: true,
       weather: {
