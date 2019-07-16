@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./Weather.css";
-import { throwStatement } from "@babel/types";
 
 export default class Weather extends Component {
   state = {
