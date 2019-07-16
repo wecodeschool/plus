@@ -1,25 +1,35 @@
 import React, { Component } from "react";
+import axios from "axios";
 import "./Weather.css";
 
 export default class Weather extends Component {
+  apiKey = "f6478028e39d2e4c2c17beea8edcfc21";
+  apiRoot = "https://api.openweathermap.org";
   state = {
     loaded: false
   };
 
-  componentDidMount() {
+  showResults = response => {
+    console.log(response);
     this.setState({
       loaded: true,
       weather: {
         date: "Tuesday 18:00",
-        city: "Lisbon",
-        description: "Partly Cloudy",
-        temperature: 21,
+        city: response.data.name,
+        description: response.data.weather[0].description,
+        temperature: Math.round(response.data.main.temp),
         iconUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
-        precipitation: 0,
-        humidity: 74,
-        wind: 26
+        humidity: response.data.main.humidity,
+        wind: Math.round(response.data.wind.speed)
       }
     });
+  };
+
+  componentDidMount() {
+    let apiUrl = `${this.apiRoot}/data/2.5/weather?q=${this.props.city}&appid=${
+      this.apiKey
+    }&units=metric`;
+    axios.get(apiUrl).then(this.showResults);
   }
 
   render() {
@@ -47,7 +57,6 @@ export default class Weather extends Component {
             </div>
             <div className="col-sm-6">
               <ul>
-                <li>Precipitation: {this.state.weather.precipitation}%</li>
                 <li>Humidity: {this.state.weather.humidity}%</li>
                 <li>Wind: {this.state.weather.wind} km/h</li>
               </ul>

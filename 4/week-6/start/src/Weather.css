@@ -20,6 +20,7 @@ li {
   font-size: 16px;
   font-weight: 100;
   line-height: 19.2px;
+  text-transform: capitalize;
 }
 
 .temperature {
@@ -34,7 +35,9 @@ li {
 }
 
 .temperature small {
+  letter-spacing: 0;
   position: relative;
   font-size: 16px;
+  left: 5px;
   top: -32px;
 }
