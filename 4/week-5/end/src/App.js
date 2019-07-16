@@ -1,31 +1,30 @@
 import React, { Component } from "react";
-import City from "./City";
+import CityWeather from "./CityWeather";
 import "./App.css";
 
 export default class App extends Component {
   render() {
-    let title = "Weather App";
     return (
       <div>
-        <h1>{title}</h1>
+        <h1>Weather App</h1>
         <div className="row">
-          <div className="col-md-4 mb-5">
-            <City name="Lisbon" temperature={22} />
+          <div className="col-md-4 mb-3">
+            <CityWeather name="Paris" />
           </div>
-          <div className="col-md-4 mb-5">
-            <City name="Berlin" temperature={20} />
+          <div className="col-md-4 mb-3">
+            <CityWeather name="Lisbon" />
           </div>
-          <div className="col-md-4 mb-5">
-            <City name="Sydney" temperature={8} />
+          <div className="col-md-4 mb-3">
+            <CityWeather name="Sydney" />
           </div>
-          <div className="col-md-4 mb-5">
-            <City name="Moscow" temperature={18} />
+          <div className="col-md-4 mb-3">
+            <CityWeather name="Santiago" />
           </div>
-          <div className="col-md-4 mb-5">
-            <City name="New York" temperature={30} />
+          <div className="col-md-4 mb-3">
+            <CityWeather name="New York" />
           </div>
-          <div className="col-md-4 mb-5">
-            <City name="Rio do Janeiro" temperature={27} />
+          <div className="col-md-4 mb-3">
+            <CityWeather name="Singapore" />
           </div>
         </div>
       </div>
