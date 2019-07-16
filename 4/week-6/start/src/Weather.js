@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import HumanDate from "./HumanDate";
 import "./Weather.css";
 
 export default class Weather extends Component {
@@ -14,7 +15,7 @@ export default class Weather extends Component {
     this.setState({
       loaded: true,
       weather: {
-        date: "Tuesday 18:00",
+        date: response.data.dt,
         city: response.data.name,
         description: response.data.weather[0].description,
         temperature: Math.round(response.data.main.temp),
@@ -38,7 +39,9 @@ export default class Weather extends Component {
         <div>
           <h1>{this.state.weather.city}</h1>
           <ul>
-            <li>{this.state.weather.date}</li>
+            <li>
+              <HumanDate timestamp={this.state.weather.date} />
+            </li>
             <li>{this.state.weather.description}</li>
           </ul>
           <div className="row">
