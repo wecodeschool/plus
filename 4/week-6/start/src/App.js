@@ -6,9 +6,9 @@ export default class App extends Component {
   render() {
     return (
       <div className="container">
-        <div className="card">
+        <div className="card m-5">
           <div className="card-body">
-            <Weather city="Lisbon" />
+            <Weather city="Moscow" />
           </div>
         </div>
       </div>

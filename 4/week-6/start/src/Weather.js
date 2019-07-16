@@ -12,6 +12,7 @@ export default class Weather extends Component {
   };
 
   showResults = response => {
+    console.log(response.data);
     this.setState({
       loaded: true,
       weather: {
@@ -19,6 +20,7 @@ export default class Weather extends Component {
         city: response.data.name,
         description: response.data.weather[0].description,
         temperature: Math.round(response.data.main.temp),
+        timezone: response.data.timezone,
         icon: response.data.weather[0].icon,
         humidity: response.data.main.humidity,
         wind: Math.round(response.data.wind.speed)
@@ -40,7 +42,10 @@ export default class Weather extends Component {
           <h1>{this.state.weather.city}</h1>
           <ul>
             <li>
-              <HumanDate timestamp={this.state.weather.date} />
+              <HumanDate
+                timestamp={this.state.weather.date}
+                timezone={this.state.weather.timezone}
+              />
             </li>
             <li>{this.state.weather.description}</li>
           </ul>
